@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutService } from '../../../services/layout/layout.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  isCollapsed: boolean;
+  constructor(
+    private layoutService: LayoutService
+  ) { }
 
   ngOnInit() {
+    this.layoutService.collapsed$.subscribe(v => this.isCollapsed = v);
   }
 
 }

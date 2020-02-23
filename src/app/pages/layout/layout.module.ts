@@ -8,13 +8,17 @@ import { SideComponent } from './side/side.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { LayoutRoutingModule } from './layout-routing.module';
+
 
 
 @NgModule({
   declarations: [MainComponent, SideComponent, HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+
+    LayoutRoutingModule
   ]
 })
 export class LayoutModule { }

@@ -3,7 +3,7 @@
         class="trigger"
         nz-icon
         [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-        (click)="isCollapsed = !isCollapsed"
+        (click)="toggle()"
     ></i>
 
     <div class="user-section">
@@ -11,11 +11,31 @@
             <i nz-icon nzType="question-circle"></i>
         </section>
 
-        <section class="header-action">
+        <section
+            class="header-action"
+            nz-popover
+            [nzPopoverTrigger]="'click'"
+            [nzPopoverContent]="contentTemplate"
+            nzPopoverPlacement="bottomRight"
+        >
             <nz-badge [nzCount]="5">
                 <i nz-icon nzType="bell"></i>
             </nz-badge>
         </section>
+
+        <ng-template #contentTemplate>
+            <nz-tabset>
+                <nz-tab nzTitle="通知">
+                    Content of Tab Pane 1
+                </nz-tab>
+                <nz-tab nzTitle="消息">
+                    Content of Tab Pane 2
+                </nz-tab>
+                <nz-tab nzTitle="代办">
+                    Content of Tab Pane 3
+                </nz-tab>
+            </nz-tabset>
+        </ng-template>
 
         <section class="header-action" nz-dropdown [nzDropdownMenu]="menu">
             <nz-avatar [nzSize]="32" nzIcon="user"></nz-avatar>
@@ -24,9 +44,22 @@
         </section>
         <nz-dropdown-menu #menu="nzDropdownMenu">
             <ul nz-menu nzSelectable>
-                <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="user"></i>
+                    <span>个人中心</span>
+                </li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="setting"></i>
+                    <span>账户设置</span>
+                </li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="bulb"></i> <span>新功能</span>
+                </li>
+                <li nz-menu-divider></li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="logout"></i>
+                    <span>退出登录</span>
+                </li>
             </ul>
         </nz-dropdown-menu>
     </div>
