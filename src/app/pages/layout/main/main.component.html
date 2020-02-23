@@ -1,0 +1,18 @@
+<nz-layout class="g-main">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <app-side></app-side>
+    </nz-sider>
+    <nz-layout>
+        <nz-header style="padding: 0;">
+            <app-header></app-header>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content">
+                Bill is a cat.
+            </div>
+        </nz-content>
+        <nz-footer>
+            <app-footer></app-footer>
+        </nz-footer>
+    </nz-layout>
+</nz-layout>

@@ -1,0 +1,41 @@
+.header {
+    height: 64px;
+    padding: 0 12px 0 0;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    position: relative;
+
+    .trigger {
+        font-size: 20px;
+        line-height: 64px;
+        padding: 0 24px;
+        cursor: pointer;
+        -webkit-transition: color .3s;
+        transition: color .3s;
+
+        &:hover {
+            background: rgba(0, 0, 0, .025);
+        }
+    }
+
+    .user-section {
+        float: right;
+
+        .header-action {
+            display: inline-block;
+            padding: 0 8px;
+            font-size: 16px;
+            margin-left: 10px;
+
+            &:hover {
+                background: rgba(0, 0, 0, .025);
+                cursor: pointer;
+            }
+
+            .txt-username {
+                margin-left: 10px;
+            }
+        }
+    }
+}

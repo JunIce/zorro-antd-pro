@@ -1,0 +1,4 @@
+{
+    "vetur.format.defaultFormatter.html": "none",
+    "editor.formatOnSave": true
+}
