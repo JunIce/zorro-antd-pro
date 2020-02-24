@@ -9,16 +9,25 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { LayoutRoutingModule } from './layout-routing.module';
+import { LayoutComponent } from './layout.component';
+import { ErrorModule } from '../error/error.module';
 
 
 
 @NgModule({
-  declarations: [MainComponent, SideComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    LayoutComponent,
+    MainComponent,
+    SideComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule,
     NgZorroAntdModule,
 
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    ErrorModule
   ]
 })
 export class LayoutModule { }

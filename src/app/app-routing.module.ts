@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './pages/layout/main/main.component';
+import { ErrorComponent } from './pages/error/error.component';
+
 
 const routes: Routes = [
   {
-    path: '',
-    component: MainComponent
+    path: 'layout',
+    loadChildren: () => import('./pages/layout/layout.module').then(m => m.LayoutModule)
+  },
+  { path: '', redirectTo: 'layout', pathMatch: 'full' },
+  {
+    path: '**',
+    component: ErrorComponent
   }
 ];
 

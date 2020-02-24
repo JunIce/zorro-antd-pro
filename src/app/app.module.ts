@@ -11,12 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { LayoutModule } from './pages/layout/layout.module';
+import { ErrorModule } from './pages/error/error.module';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    ErrorModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
