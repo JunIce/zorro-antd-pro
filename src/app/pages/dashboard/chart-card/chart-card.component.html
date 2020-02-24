@@ -1,0 +1,25 @@
+<nz-card [nzLoading]="loading" [nzBodyStyle]="bodyStyle" [nzBordered]="false">
+    <div class="chart-card-header">
+        <div class="meta">
+            <span class="chart-card-title" *ngIf="title">{{ title }}</span>
+            <span class="chart-card-action" *ngIf="action">
+                <ng-container *ngTemplateOutlet="action">{{
+                    action
+                }}</ng-container>
+            </span>
+        </div>
+        <div class="total">
+            <span *ngIf="total">{{ total }}</span>
+        </div>
+    </div>
+    <div class="chart-card-content">
+        <div class="content-fix">
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <div class="chart-card-footer">
+        <div class="field">
+            <ng-container *ngTemplateOutlet="footer">{{ total }}</ng-container>
+        </div>
+    </div>
+</nz-card>

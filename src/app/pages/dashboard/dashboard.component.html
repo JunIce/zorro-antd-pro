@@ -1,1 +1,150 @@
-<p>dashboard works!</p>
+<div class="dashboard-page">
+    <div nz-row nzGutter="24">
+        <div nz-col nzSpan="6">
+            <app-chart-card
+                [loading]="loading"
+                title="总销售额"
+                total="￥126,560"
+                [action]="actionTemplate1"
+                [footer]="footerTemplate1"
+            >
+                <div>
+                    <div>Card content</div>
+                    <!-- <trend flag="up" style="margin-right: 16px;">
+                        <span slot="term">周同比</span>
+                        12%
+                    </trend>
+                    <trend flag="down">
+                        <span slot="term">日同比</span>
+                        11%
+                    </trend> -->
+                </div>
+
+                <ng-template #actionTemplate1>
+                    <span nz-tooltip nzTooltipTitle="指标说明">
+                        <i nz-icon nzType="info-circle"></i>
+                    </span>
+                </ng-template>
+
+                <ng-template #footerTemplate1>
+                    日均销售额<span>￥ 234.56</span>
+                </ng-template>
+            </app-chart-card>
+        </div>
+
+        <div nz-col nzSpan="6">
+            <app-chart-card
+                [loading]="loading"
+                title="访问量"
+                total="8,846"
+                [action]="actionTemplate2"
+                [footer]="footerTemplate2"
+            >
+                <div>
+                    <div>Card content</div>
+                    <!-- <trend flag="up" style="margin-right: 16px;">
+                        <span slot="term">周同比</span>
+                        12%
+                    </trend>
+                    <trend flag="down">
+                        <span slot="term">日同比</span>
+                        11%
+                    </trend> -->
+                </div>
+
+                <ng-template #actionTemplate2>
+                    <span nz-tooltip nzTooltipTitle="指标说明">
+                        <i nz-icon nzType="info-circle"></i>
+                    </span>
+                </ng-template>
+
+                <ng-template #footerTemplate2>
+                    日访问量<span> 1,234</span>
+                </ng-template>
+            </app-chart-card>
+        </div>
+
+        <div nz-col nzSpan="6">
+            <app-chart-card
+                [loading]="loading"
+                title="支付笔数"
+                total="81293"
+                [action]="actionTemplate3"
+                [footer]="footerTemplate3"
+            >
+                <div>
+                    <div>Card content</div>
+                    <!-- <trend flag="up" style="margin-right: 16px;">
+                        <span slot="term">周同比</span>
+                        12%
+                    </trend>
+                    <trend flag="down">
+                        <span slot="term">日同比</span>
+                        11%
+                    </trend> -->
+                </div>
+
+                <ng-template #actionTemplate3>
+                    <span nz-tooltip nzTooltipTitle="指标说明">
+                        <i nz-icon nzType="info-circle"></i>
+                    </span>
+                </ng-template>
+
+                <ng-template #footerTemplate3>
+                    转化率<span> 65%</span>
+                </ng-template>
+            </app-chart-card>
+        </div>
+
+        <div nz-col nzSpan="6">
+            <app-chart-card
+                [loading]="loading"
+                title="活动效果"
+                total="78%"
+                [action]="actionTemplate4"
+                [footer]="footerTemplate4"
+            >
+                <div>
+                    <div>Card content</div>
+                    <!-- <trend flag="up" style="margin-right: 16px;">
+                        <span slot="term">周同比</span>
+                        12%
+                    </trend>
+                    <trend flag="down">
+                        <span slot="term">日同比</span>
+                        11%
+                    </trend> -->
+                </div>
+
+                <ng-template #actionTemplate4>
+                    <span nz-tooltip nzTooltipTitle="指标说明">
+                        <i nz-icon nzType="info-circle"></i>
+                    </span>
+                </ng-template>
+
+                <ng-template #footerTemplate4>
+                    同比<span> 32%</span>
+                </ng-template>
+            </app-chart-card>
+        </div>
+    </div>
+
+    <div class="m-20">
+        <nz-card [nzBodyStyle]="{ padding: 0 }">
+            <nz-tabset
+                [nzTabBarStyle]="{ marginBottom: '24px', paddingLeft: '16px' }"
+            >
+                <nz-tab nzTitle="销售额">
+                    <div class="chart-view">
+                        <app-chart-bar></app-chart-bar>
+                    </div>
+                </nz-tab>
+                <nz-tab nzTitle="访问量">
+                    <div class="chart-view">
+                        <app-chart-bar></app-chart-bar>
+                    </div>
+                </nz-tab>
+            </nz-tabset>
+        </nz-card>
+    </div>
+</div>
