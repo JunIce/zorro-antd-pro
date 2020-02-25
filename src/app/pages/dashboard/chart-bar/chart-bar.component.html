@@ -1,1 +1,13 @@
-<p>chart-bar works!</p>
+<div class="bar">
+    <h4>{{ title }}</h4>
+    <v-chart
+        [height]="328"
+        [(data)]="data"
+        [forceFit]="true"
+        [padding]="[20, 30, 20, 30]"
+    >
+        <v-tooltip></v-tooltip>
+        <v-axis></v-axis>
+        <v-bar position="x*y"></v-bar>
+    </v-chart>
+</div>

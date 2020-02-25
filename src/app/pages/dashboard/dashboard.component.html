@@ -132,19 +132,96 @@
     <div class="m-20">
         <nz-card [nzBodyStyle]="{ padding: 0 }">
             <nz-tabset
-                [nzTabBarStyle]="{ marginBottom: '24px', paddingLeft: '16px' }"
+                [nzTabBarStyle]="{
+                    marginBottom: '24px',
+                    paddingLeft: '16px'
+                }"
+                [nzTabBarExtraContent]="extraTemplate"
             >
                 <nz-tab nzTitle="销售额">
-                    <div class="chart-view">
-                        <app-chart-bar></app-chart-bar>
+                    <div nz-row [nzGutter]="20">
+                        <div nz-col [nzSpan]="16">
+                            <div class="chart-view">
+                                <app-chart-bar
+                                    [data]="barData"
+                                    title="销售额排行"
+                                ></app-chart-bar>
+                            </div>
+                        </div>
+                        <div nz-col [nzSpan]="8">
+                            <div>
+                                <div class="rank">
+                                    <h4 class="title">门店销售排行榜</h4>
+                                    <ul class="list">
+                                        <li
+                                            *ngFor="
+                                                let item of rankList;
+                                                index as i
+                                            "
+                                        >
+                                            <span
+                                                [ngClass]="{ active: i < 3 }"
+                                                >{{ i + 1 }}</span
+                                            >
+                                            <span>{{ item.name }}</span>
+                                            <span>{{ item.total }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nz-tab>
                 <nz-tab nzTitle="访问量">
-                    <div class="chart-view">
-                        <app-chart-bar></app-chart-bar>
+                    <div nz-row [nzGutter]="20">
+                        <div nz-col [nzSpan]="16">
+                            <div class="chart-view">
+                                <app-chart-bar
+                                    [data]="barData2"
+                                    title="销售额趋势"
+                                ></app-chart-bar>
+                            </div>
+                        </div>
+                        <div nz-col [nzSpan]="8">
+                            <div>
+                                <div class="rank">
+                                    <h4 class="title">门店销售排行榜</h4>
+                                    <ul class="list">
+                                        <li
+                                            *ngFor="
+                                                let item of rankList;
+                                                index as i
+                                            "
+                                        >
+                                            <span
+                                                [ngClass]="{ active: i < 3 }"
+                                                >{{ i + 1 }}</span
+                                            >
+                                            <span>{{ item.name }}</span>
+                                            <span>{{ item.total }}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nz-tab>
             </nz-tabset>
+            <ng-template #extraTemplate>
+                <div class="sales-extra-wrap">
+                    <div class="sales-extra">
+                        <a (click)="setDate('today')">今日</a>
+                        <a (click)="setDate('week')">本周</a>
+                        <a (click)="setDate('month')">本月</a>
+                        <a (click)="setDate('year')">本年</a>
+                    </div>
+                    <nz-range-picker
+                        [(ngModel)]="date_range"
+                        (ngModelChange)="handleRangeChange($event)"
+                        style="display:inline-block; width: 256px;"
+                    ></nz-range-picker>
+                </div>
+            </ng-template>
         </nz-card>
     </div>
 </div>
