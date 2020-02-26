@@ -1,0 +1,15 @@
+<p>test works111!</p>
+
+<button nz-button (click)="subscribe$.next(1)">
+    subscribe
+</button>
+<button nz-button (click)="target1$.next(2)">
+    target1$
+</button>
+<button nz-button (click)="target2$.next(3)">
+    target2$
+</button>
+
+<div>subscribe$: {{ subscribe$ | async }}</div>
+<div>target1$: {{ target1$ | async }}</div>
+<div>target2$: {{ target2$ | async }}</div>

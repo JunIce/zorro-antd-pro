@@ -8,9 +8,12 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { ChartCardComponent } from './chart-card/chart-card.component';
 import { ChartBarComponent } from './chart-bar/chart-bar.component';
 import { ViserModule } from 'viser-ng';
+import { WorkspaceComponent } from './workspace/workspace.component';
+import { AnalysisComponent } from './analysis/analysis.component';
+
 
 @NgModule({
-  declarations: [DashboardComponent, ChartCardComponent, ChartBarComponent],
+  declarations: [AnalysisComponent, DashboardComponent, ChartCardComponent, ChartBarComponent, WorkspaceComponent],
   imports: [
     CommonModule,
     FormsModule,

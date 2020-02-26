@@ -1,10 +1,33 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ChartBar } from '../../../entities';
 
 @Component({
   selector: 'app-chart-bar',
-  templateUrl: './chart-bar.component.html',
-  styleUrls: ['./chart-bar.component.less']
+  template: `
+    <div class="bar">
+      <h4>{{ title }}</h4>
+      <v-chart
+        [height]="328"
+        [(data)]="data"
+        [forceFit]="true"
+        [padding]="[20, 30, 20, 30]"
+      >
+        <v-tooltip></v-tooltip>
+        <v-axis></v-axis>
+        <v-bar position="x*y"></v-bar>
+      </v-chart>
+    </div>
+  `,
+  styles: [
+    `.bar {
+        padding: 0 0 32px 32px
+      }
+
+      h4 {
+          margin-bottom: 20px
+      }`
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChartBarComponent implements OnInit {
 

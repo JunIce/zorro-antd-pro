@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { ErrorModule } from '../error/error.module';
+import { TestModule } from '../test/test.module';
 
 
 
@@ -27,7 +28,8 @@ import { ErrorModule } from '../error/error.module';
     NgZorroAntdModule,
 
     LayoutRoutingModule,
-    ErrorModule
+    ErrorModule,
+    TestModule
   ]
 })
 export class LayoutModule { }

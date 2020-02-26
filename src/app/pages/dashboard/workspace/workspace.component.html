@@ -1,0 +1,94 @@
+<div class="analysis">
+    <div class="header">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item><a routerLink="/">首页</a></nz-breadcrumb-item>
+            <nz-breadcrumb-item
+                ><a routerLink="/">仪表盘</a></nz-breadcrumb-item
+            >
+            <nz-breadcrumb-item
+                ><a routerLink="/">工作台</a></nz-breadcrumb-item
+            >
+        </nz-breadcrumb>
+
+        <div class="h-header-content">
+            <div class="h-user-avatar">
+                <nz-avatar
+                    nzSrc="https://img2.woyaogexing.com/2020/02/26/7fdece37cf5044fb9d4a93246717b247!400x400.webp"
+                    [nzSize]="100"
+                ></nz-avatar>
+            </div>
+            <div class="h-content">
+                <div class="title">Manjaro Linux 19.0 发布，代号 Kyria</div>
+                <div class="content">
+                    Manjaro Linux 19.0 发布了，这是一个稳定版本，代号“Kyria”。
+                    Xfce 版本仍然是主打，此版本 Xfce 更新到
+                    4.14，并且主要致力于在桌面和窗口管理器上完善用户体验。 KDE
+                    版本提供了功能强大...
+                </div>
+            </div>
+            <div class="h-extra">
+                <div nz-row nzType="flex">
+                    <div nz-col class="ex-part">
+                        <div class="ex-title">项目</div>
+                        <div class="ex-content">8/56</div>
+                    </div>
+                    <div nz-col class="ex-part">
+                        <div class="ex-title">团队排名</div>
+                        <div class="ex-content">8/24</div>
+                    </div>
+                    <div nz-col class="ex-part">
+                        <div class="ex-title">项目数</div>
+                        <div class="ex-content">8/223</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="16">
+                <nz-card [nzTitle]="CardTitle" [nzExtra]="CardExtra">
+                    <ng-template #CardTitle>
+                        <h4>进行中的项目</h4>
+                    </ng-template>
+                    <ng-template #CardExtra>
+                        <button nz-button nzType="primary">全部</button>
+                    </ng-template>
+
+                    <div
+                        *ngFor="let item of cardList"
+                        nz-card-grid
+                        [ngStyle]="gridStyle"
+                    >
+                        <div class="card-item">
+                            <div>
+                                <img
+                                    class="card-item-avatar"
+                                    [src]="item.img"
+                                    [alt]="item.img"
+                                />
+                                <span class="card-item-title">{{
+                                    item.name
+                                }}</span>
+                            </div>
+                            <div class="card-item-content">
+                                {{ item.content }}
+                            </div>
+                            <div class="card-item-extra">
+                                <a>{{ item.username }}</a>
+                                <span>{{ item.time }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </nz-card>
+            </div>
+
+            <div nz-col [nzSpan]="8">
+                <nz-card>
+                    sfe;lkl
+                </nz-card>
+            </div>
+        </div>
+    </div>
+</div>

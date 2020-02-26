@@ -13,6 +13,10 @@ const routes: Routes = [
                 loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
             },
             {
+                path: 'test',
+                loadChildren: () => import('../test/test.module').then(m => m.TestModule)
+            },
+            {
                 path: '',
                 redirectTo: 'dashboard',
                 pathMatch: 'full',
