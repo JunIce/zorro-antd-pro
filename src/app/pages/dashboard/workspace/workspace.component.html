@@ -48,7 +48,11 @@
     <div class="content">
         <div nz-row [nzGutter]="24">
             <div nz-col [nzSpan]="16">
-                <nz-card [nzTitle]="CardTitle" [nzExtra]="CardExtra">
+                <nz-card
+                    [nzTitle]="CardTitle"
+                    [nzExtra]="CardExtra"
+                    [nzLoading]="loading"
+                >
                     <ng-template #CardTitle>
                         <h4>进行中的项目</h4>
                     </ng-template>
@@ -84,7 +88,7 @@
                 </nz-card>
 
                 <section class="notice-list">
-                    <nz-card [nzTitle]="'列表'">
+                    <nz-card [nzTitle]="'列表'" [nzLoading]="loading">
                         <nz-list
                             [nzDataSource]="noticeList"
                             [nzRenderItem]="item"
@@ -112,7 +116,7 @@
             </div>
 
             <div nz-col [nzSpan]="8">
-                <nz-card nzTitle="快速开始 / 便捷导航">
+                <nz-card nzTitle="快速开始 / 便捷导航" [nzLoading]="loading">
                     <div class="menu-group">
                         <a href="##" *ngFor="let item of menus">{{ item }}</a>
                         <button nz-button nzSize="small">
@@ -122,8 +126,22 @@
                     </div>
                 </nz-card>
 
+                <section>
+                    <nz-card [nzTitle]="'XX 指数'" [nzLoading]="loading">
+                        <v-chart
+                            [height]="300"
+                            [(data)]="viewData"
+                            [forceFit]="true"
+                        >
+                            <v-coord type="polar"></v-coord>
+                            <v-tooltip></v-tooltip>
+                            <v-axis></v-axis>
+                        </v-chart>
+                    </nz-card>
+                </section>
+
                 <section class="team-section">
-                    <nz-card nzTitle="团队">
+                    <nz-card nzTitle="团队" [nzLoading]="loading">
                         <div nz-row>
                             <ng-container
                                 *ngFor="let item of teams; index as i"

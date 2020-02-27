@@ -12,12 +12,14 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { ErrorModule } from '../error/error.module';
 import { TestModule } from '../test/test.module';
+import { FormModule } from '../form/form.module';
 
 
 
 @NgModule({
   declarations: [
     LayoutComponent,
+
     MainComponent,
     SideComponent,
     HeaderComponent,

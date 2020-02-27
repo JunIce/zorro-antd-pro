@@ -1,0 +1,81 @@
+<nz-card [nzTitle]="'基础表单'">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">标题</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <input type="text" nz-input formControlName="email" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">时间</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <nz-range-picker
+                    id="range"
+                    formControlName="range"
+                    [nzPlaceHolder]="'请选择日期'"
+                    nzShowTime
+                ></nz-range-picker>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">开关</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <nz-checkbox-group formControlName="checkbox">
+                </nz-checkbox-group>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label" nzFor="radio">Radio</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <nz-radio-group formControlName="radio">
+                    <label nz-radio nzValue="A">A</label>
+                    <label nz-radio nzValue="B">B</label>
+                    <label nz-radio nzValue="C">C</label>
+                </nz-radio-group>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">rate</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <nz-rate formControlName="rate" nzAllowHalf></nz-rate>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">select</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <nz-select
+                    [nzMaxTagCount]="3"
+                    [nzMaxTagPlaceholder]="tagPlaceHolder"
+                    nzMode="multiple"
+                    nzPlaceHolder="Please select"
+                    formControlName="select"
+                >
+                    <nz-option
+                        *ngFor="let option of listOfOption"
+                        [nzLabel]="option.label"
+                        [nzValue]="option.value"
+                    ></nz-option>
+                </nz-select>
+                <ng-template #tagPlaceHolder let-selectedList>
+                    and {{ selectedList.length }} more selected
+                </ng-template>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-label [nzSpan]="label">textarea</nz-form-label>
+            <nz-form-control [nzSpan]="control">
+                <textarea
+                    nz-input
+                    rows="4"
+                    formControlName="textarea"
+                    placeholder="textarea"
+                ></textarea>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</nz-card>

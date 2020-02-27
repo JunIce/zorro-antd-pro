@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { LayoutModule } from './pages/layout/layout.module';
 import { ErrorModule } from './pages/error/error.module';
+import { FormModule } from './pages/form/form.module';
 
 registerLocaleData(zh);
 
@@ -28,7 +29,8 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     LayoutModule,
-    ErrorModule
+    ErrorModule,
+    FormModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

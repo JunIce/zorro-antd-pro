@@ -9,7 +9,6 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    // redirectTo: 'analysis',
     children: [
       { path: 'analysis', component: AnalysisComponent },
       { path: 'workspace', component: WorkspaceComponent }

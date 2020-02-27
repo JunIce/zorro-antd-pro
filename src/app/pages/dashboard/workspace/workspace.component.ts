@@ -19,11 +19,15 @@ export class WorkspaceComponent implements OnInit {
   cardList = [];
   noticeList = [];
   teams = [];
+  viewData = [];
 
   menus = ['操作一', '操作一', '操作一', '操作一', '操作一', '操作一'];
-
+  loading = false;
   ngOnInit() {
+    this.loading = true;
+
     zip(this.dashService.fetchCardList(), this.dashService.fetchNoticeList(), this.dashService.fetchTeamsList()).subscribe((res: any) => {
+      this.loading = false;
       this.cardList = res[0].data;
       this.noticeList = res[1].data;
       this.teams = res[2].data;
