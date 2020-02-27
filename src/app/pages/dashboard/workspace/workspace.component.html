@@ -82,12 +82,68 @@
                         </div>
                     </div>
                 </nz-card>
+
+                <section class="notice-list">
+                    <nz-card [nzTitle]="'列表'">
+                        <nz-list
+                            [nzDataSource]="noticeList"
+                            [nzRenderItem]="item"
+                        >
+                            <ng-template #item let-i>
+                                <nz-list-item [nzExtra]="itemExtra">
+                                    <nz-list-item-meta
+                                        [nzTitle]="i.title"
+                                        [nzAvatar]="i.avatar"
+                                        [nzDescription]="i.content"
+                                    >
+                                        <ng-template #itemTitle>
+                                            <a>{{ i.title }}</a>
+                                        </ng-template>
+                                    </nz-list-item-meta>
+
+                                    <ng-template #itemExtra>
+                                        <a>{{ i.time }}</a>
+                                    </ng-template>
+                                </nz-list-item>
+                            </ng-template>
+                        </nz-list>
+                    </nz-card>
+                </section>
             </div>
 
             <div nz-col [nzSpan]="8">
-                <nz-card>
-                    sfe;lkl
+                <nz-card nzTitle="快速开始 / 便捷导航">
+                    <div class="menu-group">
+                        <a href="##" *ngFor="let item of menus">{{ item }}</a>
+                        <button nz-button nzSize="small">
+                            <i nz-icon nzType="plus"></i>
+                            新增
+                        </button>
+                    </div>
                 </nz-card>
+
+                <section class="team-section">
+                    <nz-card nzTitle="团队">
+                        <div nz-row>
+                            <ng-container
+                                *ngFor="let item of teams; index as i"
+                            >
+                                <div nz-col [nzSpan]="12" class="team-item">
+                                    <a>
+                                        <span class="team-avatar">
+                                            <nz-avatar
+                                                [nzSrc]="item.avatar"
+                                            ></nz-avatar>
+                                        </span>
+                                        <span class="team-name">{{
+                                            item.username
+                                        }}</span>
+                                    </a>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </nz-card>
+                </section>
             </div>
         </div>
     </div>

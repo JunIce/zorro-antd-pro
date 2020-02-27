@@ -19,4 +19,11 @@ export class DashboardService extends BaseService {
     return this.http.get(this.baseUrl + `/dashboard/workspace/cardlist`);
   }
 
+  fetchNoticeList() {
+    return this.http.get(this.baseUrl + '/dashboard/workspace/cardlist/list');
+  }
+
+  fetchTeamsList() {
+    return this.http.get(this.baseUrl + '/dashboard/workspace/teams');
+  }
 }
