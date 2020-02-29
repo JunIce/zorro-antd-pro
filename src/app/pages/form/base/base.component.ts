@@ -34,7 +34,7 @@ export class BaseComponent implements OnInit {
       radio: [null, [Validators.required]],
       textarea: [null, [Validators.required]],
       rate: [4, [Validators.required]],
-      select: [['e14', 'g13'], [Validators.required]],
+      select: [['e14'], [Validators.required]],
       slider: [87, [Validators.required]],
       switch: [true, [Validators.required]],
       timepicker: [new Date(), [Validators.required]]
