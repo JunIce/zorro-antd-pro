@@ -1,0 +1,91 @@
+<section>
+    <app-page-header title="高级详情页"></app-page-header>
+
+    <section class="advance-page">
+        <nz-card nzTitle="流程进度">
+            <nz-steps
+                [nzCurrent]="1"
+                [nzStatus]="'wait'"
+                nzSize="small"
+                nzDirection="horizontal"
+                nzProgressDot
+            >
+                <nz-step [nzTitle]="'创建项目'"></nz-step>
+                <nz-step [nzTitle]="'部门初审'"></nz-step>
+                <nz-step [nzTitle]="'财务复核'"></nz-step>
+                <nz-step [nzTitle]="'完成'"></nz-step>
+            </nz-steps>
+            <div class="steps-content"></div>
+        </nz-card>
+
+        <nz-card nzTitle="用户信息" class="mtp-20">
+            <nz-descriptions>
+                <nz-descriptions-item nzTitle="用户姓名"
+                    >付晓晓</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="会员卡号"
+                    >会员卡号</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="身份证号"
+                    >身份证号</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="联系方式"
+                    >联系方式</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="联系地址"
+                    >联系地址</nz-descriptions-item
+                >
+            </nz-descriptions>
+
+            <nz-card
+                nzTitle="下级信息"
+                class="mtp-20"
+                [nzBordered]="true"
+                nzType="inner"
+            >
+                <nz-descriptions>
+                    <nz-descriptions-item nzTitle="用户姓名"
+                        >付晓晓</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="会员卡号"
+                        >会员卡号</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="身份证号"
+                        >身份证号</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="联系方式"
+                        >联系方式</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="联系地址"
+                        >联系地址</nz-descriptions-item
+                    >
+                </nz-descriptions>
+            </nz-card>
+
+            <nz-card
+                nzTitle="下级信息"
+                class="mtp-20"
+                [nzBordered]="true"
+                nzType="inner"
+            >
+                <nz-descriptions>
+                    <nz-descriptions-item nzTitle="用户姓名"
+                        >付晓晓</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="会员卡号"
+                        >会员卡号</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="身份证号"
+                        >身份证号</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="联系方式"
+                        >联系方式</nz-descriptions-item
+                    >
+                    <nz-descriptions-item nzTitle="联系地址"
+                        >联系地址</nz-descriptions-item
+                    >
+                </nz-descriptions>
+            </nz-card>
+        </nz-card>
+    </section>
+</section>

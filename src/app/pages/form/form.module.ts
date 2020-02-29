@@ -8,20 +8,23 @@ import { StepFormComponent } from './step-form/step-form.component';
 import { FormComponent } from './form.component';
 import { FormRoutingModule } from './form-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
-
+import { CommonsModule } from '../commons/commons.module';
 
 
 @NgModule({
   declarations: [
     FormComponent,
-    BaseComponent, AdvanceComponent, StepFormComponent,
+    BaseComponent,
+    AdvanceComponent,
+    StepFormComponent
   ],
   imports: [
     CommonModule,
     FormRoutingModule,
     NgZorroAntdModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CommonsModule
   ]
 })
 export class FormModule { }

@@ -1,0 +1,113 @@
+<section>
+    <app-page-header title="基础详情页"></app-page-header>
+
+    <section class="basic-page">
+        <nz-card>
+            <nz-descriptions nzTitle="User Info">
+                <nz-descriptions-item nzTitle="UserName"
+                    >Zhou Maomao</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Telephone"
+                    >18100000000</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Live"
+                    >Hangzhou, Zhejiang</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Remark"
+                    >Empty</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Address">
+                    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang,
+                    China
+                </nz-descriptions-item>
+            </nz-descriptions>
+
+            <nz-divider></nz-divider>
+
+            <nz-descriptions nzTitle="User Info">
+                <nz-descriptions-item nzTitle="UserName"
+                    >Zhou Maomao</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Telephone"
+                    >18100000000</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Live"
+                    >Hangzhou, Zhejiang</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Remark"
+                    >Empty</nz-descriptions-item
+                >
+                <nz-descriptions-item nzTitle="Address">
+                    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang,
+                    China
+                </nz-descriptions-item>
+            </nz-descriptions>
+
+            <nz-divider></nz-divider>
+
+            <h3>退货商品</h3>
+            <nz-table
+                #nzTable
+                [nzData]="mockGoodsData"
+                nzHideOnSinglePage="true"
+                [nzPageSize]="10"
+            >
+                <thead>
+                    <tr>
+                        <th>商品编号</th>
+                        <th>商品名称</th>
+                        <th>商品条码</th>
+                        <th [nzAlign]="'right'">单价</th>
+                        <th>数量（件）</th>
+                        <th [nzAlign]="'right'">金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of nzTable.data">
+                        <td>{{ i.id }}</td>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.barcode }}</td>
+                        <td [nzAlign]="'right'">{{ i.price }}</td>
+                        <td>{{ i.num }}</td>
+                        <td [nzAlign]="'right'">{{ i.amount }}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+
+            <nz-divider></nz-divider>
+
+            <h3>退货进度</h3>
+
+            <nz-table
+                #shedual
+                [nzData]="mockSheduleData"
+                nzHideOnSinglePage="true"
+                [nzPageSize]="10"
+            >
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>当前进度</th>
+                        <th>状态</th>
+                        <th>操作员ID</th>
+                        <th>耗时</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let j of shedual.data">
+                        <td>{{ j.time }}</td>
+                        <td>{{ j.rate }}</td>
+                        <td>
+                            <nz-badge
+                                [nzStatus]="j.status"
+                                [nzText]="statusFilter(j.status)"
+                            ></nz-badge>
+                        </td>
+                        <td>{{ j.operator }}</td>
+                        <td>{{ j.cost }}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </nz-card>
+    </section>
+</section>

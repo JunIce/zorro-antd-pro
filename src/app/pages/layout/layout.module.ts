@@ -13,6 +13,7 @@ import { LayoutComponent } from './layout.component';
 import { ErrorModule } from '../error/error.module';
 import { TestModule } from '../test/test.module';
 import { FormModule } from '../form/form.module';
+import { ProfileModule } from '../profile/profile.module';
 
 
 
@@ -31,7 +32,8 @@ import { FormModule } from '../form/form.module';
 
     LayoutRoutingModule,
     ErrorModule,
-    TestModule
+    TestModule,
+    ProfileModule
   ]
 })
 export class LayoutModule { }
