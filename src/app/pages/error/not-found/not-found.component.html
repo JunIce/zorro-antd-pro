@@ -1,1 +1,11 @@
-<p>not-found works!</p>
+<section style="padding: 24px">
+    <nz-card>
+        <nz-result nzStatus="404" nzTitle="404" [nzSubTitle]="'没有找到页面'">
+            <div nz-result-extra>
+                <button nz-button [routerLink]="['/']">
+                    返回首页
+                </button>
+            </div>
+        </nz-result>
+    </nz-card>
+</section>

@@ -46,10 +46,19 @@
     <li nz-submenu nzTitle="结果页" nzIcon="form">
         <ul>
             <li nz-menu-item [routerLink]="['/layout/result/success']">
-                基础详情页
+                成功页
             </li>
             <li nz-menu-item [routerLink]="['/layout/result/failure']">
-                高级详情页
+                失败页
+            </li>
+            <li nz-menu-item [routerLink]="['/layout/result/not-found']">
+                404
+            </li>
+            <li nz-menu-item [routerLink]="['/layout/result/unauthorize']">
+                403
+            </li>
+            <li nz-menu-item [routerLink]="['/layout/result/server-error']">
+                500
             </li>
         </ul>
     </li>
