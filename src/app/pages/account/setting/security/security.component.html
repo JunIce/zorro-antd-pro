@@ -1,0 +1,74 @@
+<h3>安全设置</h3>
+<nz-list>
+    <nz-list-item [nzExtra]="nzExtra1">
+        <nz-list-item-meta
+            [nzTitle]="nzTitle"
+            nzDescription="当前密码强度 : 强"
+        >
+            <ng-template #nzTitle>
+                <a href="##">账户密码</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra1>
+            <a (click)="handleClick()">修改</a>
+        </ng-template>
+    </nz-list-item>
+
+    <nz-list-item [nzExtra]="nzExtra2">
+        <nz-list-item-meta
+            [nzTitle]="nzTitle2"
+            nzDescription="已绑定手机 : 138****8293"
+        >
+            <ng-template #nzTitle2>
+                <a href="##">密保手机</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra2>
+            <a (click)="handleClick()">修改</a>
+        </ng-template>
+    </nz-list-item>
+
+    <nz-list-item [nzExtra]="nzExtra3">
+        <nz-list-item-meta
+            [nzTitle]="nzTitle3"
+            nzDescription="未设置密保问题，密保问题可有效保护账户安全
+            设置
+            "
+        >
+            <ng-template #nzTitle3>
+                <a href="##">密保问题</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra3>
+            <a (click)="handleClick()">修改</a>
+        </ng-template>
+    </nz-list-item>
+
+    <nz-list-item [nzExtra]="nzExtra4">
+        <nz-list-item-meta
+            [nzTitle]="nzTitle4"
+            nzDescription="已绑定邮箱 : ant***sign.com"
+        >
+            <ng-template #nzTitle4>
+                <a href="##">备用邮箱</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra4>
+            <a (click)="handleClick()">修改</a>
+        </ng-template>
+    </nz-list-item>
+
+    <nz-list-item [nzExtra]="nzExtra5">
+        <nz-list-item-meta
+            [nzTitle]="nzTitle5"
+            nzDescription="未绑定 MFA 设备，绑定后，可以进行二次确认"
+        >
+            <ng-template #nzTitle5>
+                <a href="##">MFA 设备</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra5>
+            <a (click)="handleClick()">修改</a>
+        </ng-template>
+    </nz-list-item>
+</nz-list>

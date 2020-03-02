@@ -15,6 +15,7 @@ import { TestModule } from '../test/test.module';
 import { FormModule } from '../form/form.module';
 import { ProfileModule } from '../profile/profile.module';
 import { ResultModule } from '../result/result.module';
+import { AccountModule } from '../account/account.module';
 
 
 
@@ -35,7 +36,8 @@ import { ResultModule } from '../result/result.module';
     ErrorModule,
     TestModule,
     ProfileModule,
-    ResultModule
+    ResultModule,
+    AccountModule
   ]
 })
 export class LayoutModule { }

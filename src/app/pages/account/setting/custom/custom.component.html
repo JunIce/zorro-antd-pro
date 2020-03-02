@@ -1,0 +1,31 @@
+<h3>个性化设置</h3>
+<nz-list>
+    <nz-list-item [nzExtra]="nzExtra">
+        <nz-list-item-meta [nzTitle]="nzTitle" nzDescription="整体风格配色设置">
+            <ng-template #nzTitle>
+                <a href="##">风格配色</a>
+            </ng-template>
+        </nz-list-item-meta>
+        <ng-template #nzExtra>
+            <nz-switch
+                [ngModel]="true"
+                nzCheckedChildren="开"
+                nzUnCheckedChildren="关"
+            ></nz-switch>
+        </ng-template>
+    </nz-list-item>
+    <nz-list-item>
+        <nz-list-item-meta
+            [nzTitle]="nzTitle2"
+            [nzDescription]="nzDescription2"
+        >
+            <ng-template #nzTitle2>
+                <a href="##">主题色</a>
+            </ng-template>
+
+            <ng-template #nzDescription2>
+                页面风格配色： <a href="##">拂晓蓝（默认）</a>
+            </ng-template>
+        </nz-list-item-meta>
+    </nz-list-item>
+</nz-list>

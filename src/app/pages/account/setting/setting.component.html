@@ -1,0 +1,32 @@
+<section style="padding: 24px;">
+    <nz-card [nzBordered]="false">
+        <div nz-row [nzGutter]="24">
+            <div nz-col [nzSpan]="4">
+                <ul nz-menu nzMode="inline">
+                    <li nz-menu-item [routerLink]="['base']" nzMatchRouter>
+                        基本设置
+                    </li>
+                    <li nz-menu-item [routerLink]="['security']" nzMatchRouter>
+                        安全设置
+                    </li>
+                    <li nz-menu-item [routerLink]="['custom']" nzMatchRouter>
+                        个性化
+                    </li>
+                    <li nz-menu-item [routerLink]="['bind']" nzMatchRouter>
+                        账户绑定
+                    </li>
+                    <li
+                        nz-menu-item
+                        [routerLink]="['notification']"
+                        nzMatchRouter
+                    >
+                        新消息通知
+                    </li>
+                </ul>
+            </div>
+            <div nz-col [nzSpan]="20">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </nz-card>
+</section>

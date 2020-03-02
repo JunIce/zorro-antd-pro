@@ -5,28 +5,54 @@
 <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
     <li nz-submenu nzTitle="仪表盘" nzIcon="dashboard">
         <ul>
-            <li nz-menu-item [routerLink]="['/layout/dashboard/analysis']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/dashboard/analysis']"
+                nzMatchRouter
+            >
                 分析页
             </li>
-            <li nz-menu-item [routerLink]="['/layout/dashboard/monitor']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/dashboard/monitor']"
+                nzMatchRouter
+            >
                 监控页
             </li>
-            <li nz-menu-item [routerLink]="['/layout/dashboard/workspace']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/dashboard/workspace']"
+                nzMatchRouter
+            >
                 工作台
             </li>
-            <li nz-menu-item [routerLink]="['/layout/dashboard/test']">测试</li>
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/dashboard/test']"
+                nzMatchRouter
+            >
+                测试
+            </li>
         </ul>
     </li>
 
     <li nz-submenu nzTitle="表单页" nzIcon="form">
         <ul>
-            <li nz-menu-item [routerLink]="['/layout/form/base']">
+            <li nz-menu-item [routerLink]="['/layout/form/base']" nzMatchRouter>
                 基础表单
             </li>
-            <li nz-menu-item [routerLink]="['/layout/form/step-form']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/form/step-form']"
+                nzMatchRouter
+            >
                 分步表单
             </li>
-            <li nz-menu-item [routerLink]="['/layout/form/advance']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/form/advance']"
+                nzMatchRouter
+            >
                 高级表单
             </li>
         </ul>
@@ -34,10 +60,18 @@
 
     <li nz-submenu nzTitle="详情页" nzIcon="form">
         <ul>
-            <li nz-menu-item [routerLink]="['/layout/profile/basic']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/profile/basic']"
+                nzMatchRouter
+            >
                 基础详情页
             </li>
-            <li nz-menu-item [routerLink]="['/layout/profile/advance']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/profile/advance']"
+                nzMatchRouter
+            >
                 高级详情页
             </li>
         </ul>
@@ -45,20 +79,59 @@
 
     <li nz-submenu nzTitle="结果页" nzIcon="form">
         <ul>
-            <li nz-menu-item [routerLink]="['/layout/result/success']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/result/success']"
+                nzMatchRouter
+            >
                 成功页
             </li>
-            <li nz-menu-item [routerLink]="['/layout/result/failure']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/result/failure']"
+                nzMatchRouter
+            >
                 失败页
             </li>
-            <li nz-menu-item [routerLink]="['/layout/result/not-found']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/result/not-found']"
+                nzMatchRouter
+            >
                 404
             </li>
-            <li nz-menu-item [routerLink]="['/layout/result/unauthorize']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/result/unauthorize']"
+                nzMatchRouter
+            >
                 403
             </li>
-            <li nz-menu-item [routerLink]="['/layout/result/server-error']">
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/result/server-error']"
+                nzMatchRouter
+            >
                 500
+            </li>
+        </ul>
+    </li>
+
+    <li nz-submenu nzTitle="个人页" nzIcon="user">
+        <ul>
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/account/center']"
+                nzMatchRouter
+            >
+                个人中心
+            </li>
+            <li
+                nz-menu-item
+                [routerLink]="['/layout/account/setting']"
+                nzMatchRouter
+            >
+                个人设置
             </li>
         </ul>
     </li>

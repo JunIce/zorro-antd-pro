@@ -1,0 +1,68 @@
+<h3>基本设置</h3>
+
+<div nz-row [nzGutter]="100">
+    <div nz-col [nzSpan]="16">
+        <form nz-form [formGroup]="validateForm" nzLayout="vertical">
+            <nz-form-item>
+                <nz-form-label>昵称</nz-form-label>
+                <nz-form-control>
+                    <input type="text" nz-input />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label>Bio</nz-form-label>
+                <nz-form-control>
+                    <textarea nz-input placeholder="" rows="10"></textarea>
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label>电子邮件</nz-form-label>
+                <nz-form-control>
+                    <input type="text" nz-input />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label>登录密码</nz-form-label>
+                <nz-form-control>
+                    <input type="text" nz-input />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label>连接密码</nz-form-label>
+                <nz-form-control>
+                    <input type="text" nz-input />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <button nz-button>取消</button>
+
+                <button nz-button nzType="primary">保存</button>
+            </nz-form-item>
+        </form>
+    </div>
+    <div nz-col [nzSpan]="8">
+        <div class="avatar-upload">
+            <i
+                nz-icon
+                nzType="cloud-upload"
+                nzTheme="outline"
+                class="upload-icon"
+            ></i>
+            <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/">
+                <nz-avatar
+                    nzSrc="https://img2.woyaogexing.com/2020/02/28/2051266075e643d38c021731e17d670f!400x400.webp"
+                    [nzSize]="180"
+                    nzShape="circle"
+                ></nz-avatar>
+                <div class="avatar-mask">
+                    <i nz-icon nzType="plus" class="avatar-add-icon"></i>
+                </div>
+            </nz-upload>
+        </div>
+    </div>
+</div>

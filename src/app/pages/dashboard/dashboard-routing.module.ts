@@ -10,6 +10,7 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
+      { path: '', pathMatch: 'full', redirectTo: 'analysis' },
       { path: 'analysis', component: AnalysisComponent },
       { path: 'workspace', component: WorkspaceComponent }
     ]
