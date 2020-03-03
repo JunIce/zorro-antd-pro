@@ -1,0 +1,27 @@
+<section>
+    <div nz-row [nzGutter]="24">
+        <ng-container *ngFor="let item of list">
+            <div nz-col [nzSpan]="8" style="margin-bottom: 24px;">
+                <nz-card
+                    [nzActions]="[actionSetting, actionEdit, actionEllipsis]"
+                >
+                    <nz-card-meta
+                        nzTitle="Card title"
+                        nzDescription="This is the description"
+                        [nzAvatar]="avatarTemplate"
+                    ></nz-card-meta>
+
+                    <ng-template #actionSetting>
+                        <i nz-icon nzType="setting"></i>
+                    </ng-template>
+                    <ng-template #actionEdit>
+                        <i nz-icon nzType="edit"></i>
+                    </ng-template>
+                    <ng-template #actionEllipsis>
+                        <i nz-icon nzType="ellipsis"></i>
+                    </ng-template>
+                </nz-card>
+            </div>
+        </ng-container>
+    </div>
+</section>

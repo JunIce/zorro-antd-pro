@@ -1,0 +1,20 @@
+<section>
+    <div nz-row [nzGutter]="24">
+        <ng-container *ngFor="let item of list">
+            <div nz-col [nzSpan]="8" style="margin-bottom: 24px;">
+                <nz-card nzHoverable [nzCover]="coverTemplate">
+                    <nz-card-meta
+                        nzTitle="Europe Street beat"
+                        nzDescription="www.instagram.com"
+                    ></nz-card-meta>
+                    <ng-template #coverTemplate>
+                        <img
+                            alt="example"
+                            src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                        />
+                    </ng-template>
+                </nz-card>
+            </div>
+        </ng-container>
+    </div>
+</section>

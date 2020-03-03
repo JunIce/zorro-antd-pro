@@ -12,6 +12,9 @@ import { NotificationComponent } from './setting/notification/notification.compo
 import { AccountComponent } from './account.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CenterProjectComponent } from './center/center-project/center-project.component';
+import { CenterArticleComponent } from './center/center-article/center-article.component';
+import { CenterAppComponent } from './center/center-app/center-app.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CustomComponent,
     BindComponent,
     NotificationComponent,
-    AccountComponent
+    AccountComponent,
+    CenterProjectComponent,
+    CenterArticleComponent,
+    CenterAppComponent
   ],
   imports: [
     CommonModule,

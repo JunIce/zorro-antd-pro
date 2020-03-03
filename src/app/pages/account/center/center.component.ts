@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./center.component.less']
 })
 export class CenterComponent implements OnInit {
-
+  index2 = 0;
+  list = new Array(8);
   constructor() { }
 
   ngOnInit() {
