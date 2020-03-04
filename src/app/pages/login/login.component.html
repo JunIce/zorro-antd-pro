@@ -1,0 +1,83 @@
+<div class="page">
+    <section class="login-section">
+        <div nz-row nzType="flex" nzJustify="center">
+            <div nz-col [nzSpan]="8">
+                <nz-card [nzHoverable]="true">
+                    <form nz-form>
+                        <nz-tabset class="login-tab">
+                            <nz-tab nzTitle="账号密码登录">
+                                <nz-form-item>
+                                    <nz-form-control>
+                                        <nz-input-group nzPrefixIcon="user">
+                                            <input
+                                                nz-input
+                                                placeholder="请输入账户"
+                                                [(ngModel)]="acount"
+                                                name="acount"
+                                            />
+                                        </nz-input-group>
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <nz-form-item>
+                                    <nz-form-control>
+                                        <nz-input-group nzPrefixIcon="lock">
+                                            <input
+                                                nz-input
+                                                placeholder="请输入密码"
+                                                type="password"
+                                                [(ngModel)]="password"
+                                                name="password"
+                                            />
+                                        </nz-input-group>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </nz-tab>
+                            <nz-tab nzTitle="手机号登录">
+                                Content of Tab Pane 2
+                            </nz-tab>
+                        </nz-tabset>
+
+                        <nz-form-item>
+                            <nz-form-control>
+                                <label
+                                    nz-checkbox
+                                    [(ngModel)]="auto"
+                                    name="auto"
+                                    >自动登录</label
+                                >
+                                <a href="javascript:;" style="float: right;"
+                                    >忘记密码</a
+                                >
+                            </nz-form-control>
+                        </nz-form-item>
+
+                        <button
+                            nz-button
+                            nzBlock="true"
+                            nzType="primary"
+                            nzSize="large"
+                        >
+                            登录
+                        </button>
+
+                        <div class="other clear">
+                            <div class="left">
+                                <span>其他登录方式</span>
+                                <a href="">
+                                    <i nz-icon nzType="alipay-circle"></i>
+                                </a>
+                                <a href="">
+                                    <i nz-icon nzType="weibo-circle"></i>
+                                </a>
+                                <a href="">
+                                    <i nz-icon nzType="wechat"></i>
+                                </a>
+                            </div>
+                            <a href="" style="float: right;">注册账户</a>
+                        </div>
+                    </form>
+                </nz-card>
+            </div>
+        </div>
+    </section>
+</div>
